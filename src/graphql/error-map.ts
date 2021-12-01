@@ -110,6 +110,10 @@ export const mapError = (error: ApplicationError): CustomApolloError => {
       message = "Unable to find a route for payment."
       return new RouteFindingError({ message, logger: baseLogger })
 
+    case "InsufficientBalanceForRoutingError":
+      message = "Insufficient balance for finding a route."
+      return new RouteFindingError({ message, logger: baseLogger })
+
     case "UnknownRouteNotFoundError":
       message = "Unknown error occurred when trying to find a route for payment."
       return new RouteFindingError({ message, logger: baseLogger })
