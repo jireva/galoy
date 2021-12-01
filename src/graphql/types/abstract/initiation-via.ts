@@ -35,7 +35,8 @@ const InitiationViaOnChain = new GT.Object({
   isTypeOf: (source) => source.type === PaymentInitiationMethod.OnChain,
   fields: () => ({
     address: {
-      type: GT.NonNull(OnChainAddress),
+      // type: GT.NonNull(OnChainAddress),
+      type: OnChainAddress,
     },
   }),
 })
